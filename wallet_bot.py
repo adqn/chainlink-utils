@@ -39,7 +39,6 @@ class WalletBot:
 
     # amount in wei
     # addr object
-    # currently failing for some reason even though Etherscan reports correct balances....
     def send_balance(self, addr_from, addr_to): 
         if self.tx_in_progress and self.tx_amount != 0:
             tx = {"from": addr_from["addr"], "to": addr_to["addr"], "value": int(self.tx_amount)}
